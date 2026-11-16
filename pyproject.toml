@@ -1,7 +1,21 @@
 [project]
 name = "kck-cyber-trainer"
 version = "0.1.0"
-description = "Add your description here"
+description = "Your hammer trainer for KCK"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "mediapipe>=1.2.3",
+    "numpy>=2.5.4",
+    "opencv-python>=5.0.0.93",
+]
+
+[project.scripts]
+kck-cyber-trainer = "kck_cyber_trainer.main:main"
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
